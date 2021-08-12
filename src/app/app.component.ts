@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
+import { Configuration, configurationToken } from 'src/configuration/configuration';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-config';
+  myCustomSetting;
+
+  constructor(@Inject(configurationToken) private configuration: Configuration) {
+    this.myCustomSetting = configuration.myCustomSetting
+  }
 }
