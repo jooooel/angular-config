@@ -5,7 +5,7 @@ import { AppModule } from './app/app.module';
 import { configurationToken } from './configuration/configuration';
 
 // Platform creation and bootstrapping of the application is delayed until we have loaded the configuration file.
-// The configuration file will be replaces (in Dockerfile) based on environment
+// The contents of the configuration file will be replaced (in Dockerfile) based on environment
 let configurationPath = `/configuration/configuration.json`;
 fetch(configurationPath)
     .then(response => response.json())

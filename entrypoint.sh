@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 
-# # Lowercase the environment name
+# Lowercase the environment name
 ENV=$(echo $ENVIRONMENT | tr '[:upper:]' '[:lower:]')
 
 # Copy the configuration file for the current environment
